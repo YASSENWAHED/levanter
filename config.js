@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || '26_8_2490_9bdd_e6f2').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -32,12 +32,12 @@ module.exports = {
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '𝑺𝑨𝑺𝑨',
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
   LOG_MSG: toBool(process.env.LOG_MSG) || false,
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
-  LANG: (process.env.LANGUAG || 'en').toLowerCase(),
+  LANG: (process.env.LANGUAG || 'ar').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
   FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
@@ -60,7 +60,7 @@ module.exports = {
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
   ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
-  PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').trim(),
+  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'null',
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
     : false,
@@ -74,11 +74,8 @@ module.exports = {
   WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
   TRUECALLER: process.env.TRUECALLER,
   DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
-  LIST_TYPE: (process.env.LIST_TYPE || 'text').trim(),
+  LIST_TYPE: (process.env.LIST_TYPE || 'poll').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
   GEMINI_API_KEY: (process.env.GEMINI_API_KEY || '').trim(),
   ADMINS: process.env.GROUP_ADMINS || '',
-  RENDER_NAME: (process.env.RENDER_NAME || '').trim(),
-  RENDER_API_KEY: (process.env.RENDER_API_KEY || '').trim(),
-  TIMEZONE: process.env.TIMEZONE,
 }
